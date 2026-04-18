@@ -1,0 +1,16 @@
+name: napari-video-streamer
+display_name: Video Streamer
+contributions:
+  commands:
+    - id: napari-video-streamer.get_reader
+      python_name: napari_video_streamer:napari_get_reader
+      title: Open Video
+  readers:
+    - command: napari-video-streamer.get_reader
+      accepts_directories: false
+      filename_patterns:
+        - "*.mp4"
+        - "*.mkv"
+        - "*.avi"
+        - "*.mov"
+        - "*.webm"

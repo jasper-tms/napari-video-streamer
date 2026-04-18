@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "napari-video-streamer"
+version = "0.1.0"
+dependencies = [
+    "dask[array]",
+    "numpyimage[vid]",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+napari_video_streamer = ["napari.yaml"]
+
+[project.entry-points."napari.manifest"]
+napari-video-streamer = "napari_video_streamer:napari.yaml"
